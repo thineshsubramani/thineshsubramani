@@ -1,5 +1,5 @@
 ## Hi there 👋
-### I'm actively looking for a software engineering internship to enhance my skills
+### I'm actively looking for a software engineering internship
 <!--
 **thineshsubramani/thineshsubramani** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
