@@ -1,6 +1,12 @@
 ## Hi there 👋
 ### I'm actively looking for a software engineering internship
 ### Elite Programmer
+
+### Sorry, I have worked lot of Software Development project offline and I learned Github just 1 year before.
+####I’m currently working on Resume Scanner Project
+### My Skills
+# 3.5 Years of Programming Skills
+# Deep knowlegde in Data Structures
 <!--
 **thineshsubramani/thineshsubramani** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
