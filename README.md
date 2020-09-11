@@ -6,8 +6,8 @@
 
 
 ### My Skills
-#### 3.5 Years of Programming Experiences
-#### Strong knowlegde in Data Structures
+##### 3.5 Years of Programming Experiences
+##### Strong knowlegde in Data Structures
 <!--
 **thineshsubramani/thineshsubramani** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
