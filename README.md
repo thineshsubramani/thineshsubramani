@@ -2,8 +2,9 @@
 ### I'm actively looking for a software engineering internship
 ### Elite Programmer
 
-### Sorry, I have worked lot of Software Development project offline and I learned Github just 1 year before.
-####I’m currently working on Resume Scanner Project
+### Sorry, I have worked on lot of Software Development project in university but of most projects are passionate and solo project so I didn't upload into github. 
+
+
 ### My Skills
 # 3.5 Years of Programming Skills
 # Deep knowlegde in Data Structures
