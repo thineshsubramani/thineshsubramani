@@ -4,7 +4,7 @@
 
 ##### Sorry, I have worked on lot of Software Development projects in university but of most projects are solo project so I didn't upload into github. 
 
-
+Expertise in Devops And Big Data Technology
 ### My Skills
 ##### 3.5 Years of Programming Experiences
 ##### Strong knowlegde in Data Structures
