@@ -1,13 +1,6 @@
-## Hi there 👋
-### I'm actively looking for a software engineering internship
-### Elite Programmer
 
-##### Sorry, I have worked on lot of Software Development projects in university but of most projects are solo project so I didn't upload into github. 
-
-Expertise in Devops And Big Data Technology
-### My Skills
-##### 3.5 Years of Programming Experiences
-##### Strong knowlegde in Data Structures
+Expertise in Devops 
+##### 7 Years of Programming Experiences
 <!--
 **thineshsubramani/thineshsubramani** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
