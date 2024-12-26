@@ -71,7 +71,7 @@
         }
 
         /* Button Styles */
-        .whatsapp-button, .meet-button {
+        .whatsapp-button, .meet-button, .download-button {
             display: inline-block;
             padding: 0.8em 2em;
             margin-top: 2em;
@@ -84,16 +84,16 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .whatsapp-button:hover, .meet-button:hover {
+        .whatsapp-button:hover, .meet-button:hover, .download-button:hover {
             background-color: var(--button-hover-color);
             transform: translateY(-4px);
         }
 
-        .whatsapp-button:active, .meet-button:active {
+        .whatsapp-button:active, .meet-button:active, .download-button:active {
             background-color: var(--button-active-color);
         }
 
-        .whatsapp-button i, .meet-button i {
+        .whatsapp-button i, .meet-button i, .download-button i {
             vertical-align: middle;
             margin-right: 10px;
         }
@@ -132,7 +132,16 @@
         <a href="https://calendly.com/thineshsubramani/30min" class="meet-button" target="_blank">
             <i class="material-icons">videocam</i> Book a Google Meet (30 min)
         </a>
-    </div>
 
-</body>
-</html>
+        <p>or</p>
+
+        <!-- Hidden download link -->
+        <a id="downloadLink" href="data:text/plain;base64,PASTE_YOUR_BASE64_ENCODED_SCRIPT_HERE" download="more_about_me.sh" style="display: none;"></a>
+
+        <!-- Download button -->
+        <a href="#" class="download-button" onclick="document.getElementById('downloadLink').click(); return false;">
+            <i class="material-icons">get_app</i> Download Bash Script
+        </a>
+   
+::contentReference[oaicite:0]{index=0}
+ 
