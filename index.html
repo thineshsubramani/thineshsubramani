@@ -17,8 +17,7 @@
             --text-color: #212121;
             --button-hover-color: #3b5566;
             --button-active-color: #021024;
-            --navbar-bg: #052659;
-            --navbar-text-color: #fff;
+            --container-bg: #e1e8f0; /* Light grey to match the background */
         }
 
         body {
@@ -53,7 +52,7 @@
             max-width: 900px;
             margin: 3em auto;
             padding: 2em;
-            background-color: #fff;
+            background-color: var(--container-bg); /* Updated container color */
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -71,33 +70,12 @@
             color: var(--text-color);
         }
 
-        /* Navigation Bar */
-        nav {
-            background-color: var(--navbar-bg);
-            color: var(--navbar-text-color);
-            padding: 1em 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--navbar-text-color);
-            font-size: 1.2em;
-            margin: 0 1em;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--accent-color);
-        }
-
         /* Button Styles */
         .whatsapp-button, .meet-button {
             display: inline-block;
             padding: 0.8em 2em;
             margin-top: 2em;
-            background-color: var(--secondary-color);
+            background-color: var(--secondary-color); /* Used secondary color */
             color: white;
             font-size: 1.2em;
             border-radius: 50px;
@@ -121,24 +99,15 @@
         }
 
         .whatsapp-button {
-            background-color: #25D366;
+            background-color: #025f2f; /* Updated to match the provided color */
         }
 
         .meet-button {
-            background-color: #007bff;
+            background-color: #5483B3; /* Updated to match the provided color */
         }
-
     </style>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </nav>
 
     <header>
         <h1>Welcome to My Portfolio</h1>
