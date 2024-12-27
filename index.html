@@ -3,110 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal Simulation - Thinesh's Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thinesh - Senior Infrastructure & DevOps Engineer</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
+        /* Custom Color Palette */
+        :root {
+            --primary-color: #031c45;
+            --secondary-color: #154f8d;
+            --accent-color: #6c96c9;
+            --light-color: #87b4d6;
+            --background-color: #f0f7ff;
+            --text-color: #212121;
+            --button-hover-color: #4a7fa6;
+            --button-active-color: #154f8d;
+            --container-bg: #e8f3ff;
+            --terminal-bg: #031c45;
+            --terminal-text: #87b4d6;
+            --terminal-green: #4CAF50;
+        }
+
         body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
             margin: 0;
             padding: 0;
-            background-color: #031c45; /* Terminal background color */
-            color: #87b4d6; /* Terminal text color */
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 16px;
-            overflow: hidden;
+            color: var(--text-color);
         }
-        #terminal {
-            padding: 20px;
-            white-space: pre-wrap;
-            line-height: 1.5;
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 3em 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .command-line {
-            color: #6c96c9; /* Command-line color */
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
         }
-        .typing-cursor {
+
+        p {
+            margin: 0;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 3em auto;
+            padding: 2em;
+            background-color: var(--container-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.5em;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-top: 1em;
+        }
+
+        .whatsapp-button, .meet-button {
             display: inline-block;
-            width: 10px;
-            height: 18px;
-            background-color: #87b4d6; /* Cursor color */
-            margin-left: 2px;
-            animation: blink 0.6s step-end infinite;
+            padding: 0.8em 2em;
+            margin-top: 2em;
+            background-color: var(--secondary-color);
+            color: white;
+            font-size: 1.2em;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        @keyframes blink {
-            50% {
-                background-color: transparent;
-            }
+
+        .whatsapp-button:hover, .meet-button:hover {
+            background-color: var(--button-hover-color);
+            transform: translateY(-4px);
+        }
+
+        .whatsapp-button:active, .meet-button:active {
+            background-color: var(--button-active-color);
+        }
+
+        .whatsapp-button {
+            background-color: #4CAF50;
+        }
+
+        .meet-button {
+            background-color: #4e92cc;
+        }
+
+        /* Terminal Styles */
+        .terminal {
+            max-width: 900px;
+            margin: 3em auto;
+            background-color: var(--terminal-bg);
+            color: var(--terminal-text);
+            padding: 1em 1.5em;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 1em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .terminal-line {
+            display: flex;
+            align-items: center;
+            margin: 0.2em 0;
+        }
+
+        .terminal-line span {
+            margin-right: 0.5em;
+        }
+
+        .terminal-line .prompt {
+            color: var(--terminal-green);
         }
     </style>
 </head>
 <body>
-    <div id="terminal"></div>
 
-    <script>
-        const terminal = document.getElementById('terminal');
+<header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Thinesh - Senior Infrastructure & DevOps Engineer</p>
+</header>
 
-        const messages = [
-            "***** Welcome to Thinesh's Portfolio *****",
-            "",
-            ">>> Loading profile...",
-            "",
-            "***** Introduction *****",
-            "I am passionate about contributing to organizations that value innovation and human creativity.",
-            ">>> Contact: +60127833552",
-            ">>> WhatsApp: https://wa.me/0127833552",
-            ">>> Google Meet: https://calendly.com/thineshsubramani/30min",
-            "",
-            "***** Professional Journey *****",
-            "I have transitioned from a Software Engineer to DevOps, and currently to a Site Reliability Engineer (SRE), building upon a strong foundation in coding.",
-            "",
-            "***** Future Plans *****",
-            "I have dedicated several years to selecting the appropriate research path, not merely for academic advancement.",
-            "My goal is to explore new system design methodologies for large-scale microservices.",
-            "I aim to pursue a Master's degree in distributed computing, focusing on large-scale system designs and microservices.",
-            "",
-            "***** Personal Interests in SRE *****",
-            "I enjoy simulating my own homelab and managing SRE setups, including configuring Proxmox virtual machines.",
-            "",
-            "***** Areas of Lesser Interest *****",
-            "While I am expanding my knowledge in monitoring tools like Grafana and have experience with ELK, I have less interest in security-related tasks and frameworks.",
-            "",
-            "***** Personality and Working Style *****",
-            "- As an INFJ, 'The Advocate,' I prioritize delivering results efficiently, adhering to the 80/20 principle.",
-            "- I prefer to automate repetitive tasks to enhance productivity, exemplified by creating a Python CLI tool for sending emails.",
-            "- I value trust in my ideas and proactively address organizational challenges by developing proofs of concept.",
-            "",
-            ">>> My official portfolio website is under development, extending features...",
-            ">>> End of Profile. Have a great day!"
-            
-        ];
+<div class="content">
+    <p>Hello, I'm Thinesh. I am a Senior Infrastructure & DevOps Engineer with years of experience in building scalable, reliable, and efficient systems. Feel free to reach out for potential collaborations or discussions on DevOps practices.</p>
+    
+    <p>If you'd like to have a conversation, please <strong>message me on WhatsApp</strong> first before making a call. Alternatively, you can <strong>book a Google Meet</strong> at a convenient time.</p>
 
-        let currentMessage = 0;
-        let currentChar = 0;
+    <p class="contact-info">
+        📞 Contact Number: <strong>+60127833552</strong>
+    </p>
 
-        function typeMessage() {
-            if (currentMessage < messages.length) {
-                if (currentChar < messages[currentMessage].length) {
-                    terminal.innerHTML +=
-                        '<span class="command-line">' +
-                        messages[currentMessage][currentChar] +
-                        '</span>';
-                    currentChar++;
-                } else {
-                    terminal.innerHTML += '\n';
-                    currentChar = 0;
-                    currentMessage++;
-                }
-            }
+    <a href="https://wa.me/0127833552" class="whatsapp-button" target="_blank">
+        <i class="material-icons">chat</i> Message me on WhatsApp
+    </a>
+
+    <p>or</p>
+
+    <a href="https://calendly.com/thineshsubramani/30min" class="meet-button" target="_blank">
+        <i class="material-icons">videocam</i> Book a Google Meet (30 min)
+    </a>
+</div>
+
+<div class="terminal" id="terminal"></div>
+
+<script>
+    const terminalElement = document.getElementById("terminal");
+    const terminalLines = [
+        "***** Introduction *****",
+        "I am passionate about contributing to organizations that value innovation and human creativity.",
+        "",
+        "***** Professional Journey *****",
+        "I have transitioned from a Software Engineer to DevOps, and currently to a Site Reliability Engineer (SRE), building upon a strong foundation in coding and automation.",
+        "",
+        "***** Future Plans *****",
+        "I have dedicated several years to selecting the appropriate research path, not merely for academic advancement.",
+        "My goal is to explore new system design methodologies for large-scale microservices.",
+        "I aim to pursue a Master's degree in distributed computing, focusing on large-scale system designs and microservices.",
+        "",
+        "***** Personal Interests in SRE *****",
+        "I enjoy simulating my own homelab and managing SRE setups, including configuring Proxmox virtual machines.",
+        "",
+        "***** Areas of Lesser Interest *****",
+        "While I am expanding my knowledge in monitoring tools like Grafana and have experience with ELK, I have less interest in security-related tasks and frameworks.",
+        "",
+        "***** Personality and Working Style *****",
+        "- As an INFJ, 'The Advocate,' I prioritize delivering results efficiently, adhering to the 80/20 principle.",
+        "- I prefer to automate repetitive tasks to enhance productivity, exemplified by creating a Python CLI tool for sending emails.",
+        "- I value trust in my ideas and proactively address organizational challenges by developing proofs of concept."
+    ];
+
+    let lineIndex = 0;
+
+    function writeLine() {
+        if (lineIndex < terminalLines.length) {
+            const line = terminalLines[lineIndex];
+            const terminalLine = document.createElement("div");
+            terminalLine.classList.add("terminal-line");
+
+            const prompt = document.createElement("span");
+            prompt.classList.add("prompt");
+            prompt.textContent = "$";
+
+            const text = document.createElement("span");
+            text.textContent = line;
+
+            terminalLine.appendChild(prompt);
+            terminalLine.appendChild(text);
+            terminalElement.appendChild(terminalLine);
+
+            lineIndex++;
+            setTimeout(writeLine, Math.random() * 200 + 50); // Random speed for typing effect
         }
+    }
 
-        function runTyping() {
-            typeMessage();
-            if (currentMessage < messages.length) {
-                setTimeout(runTyping, 40); // Fast typing speed
-            } else {
-                terminal.innerHTML += '<span class="typing-cursor"></span>';
-            }
-        }
+    writeLine();
+</script>
 
-        runTyping();
-    </script>
 </body>
 </html>
