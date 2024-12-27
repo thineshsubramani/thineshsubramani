@@ -133,7 +133,7 @@
     }
 
     .json-container .string {
-        color: #f7a6b7;
+        color: #00fff2;
     }
 
     .json-container .number {
@@ -147,6 +147,7 @@
     .json-container .null {
         color: #9e9e9e;
     }
+    
     </style>
 </head>
 <body>
@@ -176,19 +177,60 @@
 
 <script>
     // Function to format and display JSON
-    function formatJSON(jsonObject) {
-        const jsonContainer = document.getElementById("json-container");
-        jsonContainer.innerHTML = syntaxHighlight(JSON.stringify(jsonObject, null, 2));
+// Function to format and display JSON
+function formatJSON(jsonObject) {
+    const jsonContainer = document.getElementById("json-container");
+    const formattedJSON = JSON.stringify(jsonObject, null, 4); // Format JSON with indentation
+    const highlightedJSON = syntaxHighlight(formattedJSON); // Apply syntax highlighting
+    console.log(highlightedJSON); // For debugging, see the highlighted JSON
+    jsonContainer.innerHTML = highlightedJSON; // Set formatted and highlighted JSON as innerHTML
+}
+
+// Function to add colors and styles to the JSON content
+// Function to add colors and styles to the JSON content
+// Function to add colors and styles to the JSON content with structured HTML
+function syntaxHighlight(json) {
+    // Parse the JSON and recursively format it
+    const jsonObject = JSON.parse(json);
+
+    function formatJson(obj) {
+        if (typeof obj === 'object' && !Array.isArray(obj)) {
+            let html = '<div class="json-object">';
+            for (const key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    html += `<ul class="json-key-value"><li class="key">"${key}":</li><li class="value">${formatJson(obj[key])}</li></ul>`;
+                }
+            }
+            html += '</div>';
+            return html;
+        } else if (Array.isArray(obj)) {
+            let html = '<ul class="json-array">';
+            for (const item of obj) {
+                html += `<li class="array-item">${formatJson(item)}</li>`;
+            }
+            html += '</ul>';
+            return html;
+        } else {
+            return `<span class="value">${highlightPrimitiveValue(obj)}</span>`;
+        }
     }
 
-    // Function to add colors and styles to the JSON content
-    function syntaxHighlight(json) {
-        return json.replace(/"([^"]+)":/g, '"<span class="key">$1</span>":')
-                   .replace(/"(.*?)"/g, '"<span class="string">$1</span>"')
-                   .replace(/\b(true|false)\b/g, '<span class="boolean">$1</span>')
-                   .replace(/\b(null)\b/g, '<span class="null">$1</span>')
-                   .replace(/(\d+)/g, '<span class="number">$1</span>');
+    function highlightPrimitiveValue(value) {
+        if (typeof value === 'string') {
+            return `<span class="string">"${value}"</span>`;
+        } else if (typeof value === 'boolean') {
+            return `<span class="boolean">${value}</span>`;
+        } else if (value === null) {
+            return `<span class="null">${value}</span>`;
+        } else if (typeof value === 'number') {
+            return `<span class="number">${value}</span>`;
+        }
+        return value;
     }
+
+    return formatJson(jsonObject);
+}
+
 
     // Fetch JSON from the file in the same directory
     fetch('resume.json')
@@ -201,7 +243,7 @@
     // Sample terminal content
     const terminalElement = document.getElementById("terminal");
     const terminalLines = [
-       "***** Introduction *****",
+    "***** Introduction *****",
         "I am passionate about contributing to organizations that value innovation and human creativity.",
         "",
         "***** Professional Journey *****",
@@ -234,7 +276,7 @@
 
             const prompt = document.createElement("span");
             prompt.classList.add("prompt");
-            prompt.textContent = "root@thinesh:~$";
+            prompt.textContent = "thinesh@resume:~$";
             
             const text = document.createElement("span");
             text.textContent = line;
@@ -243,7 +285,7 @@
             terminalLine.appendChild(text);
             terminalElement.appendChild(terminalLine);
             lineIndex++;
-            setTimeout(writeLine, 1500);
+            setTimeout(writeLine, 300);
         }
     }
 
