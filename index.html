@@ -3,127 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Thinesh - Senior Infrastructure & DevOps Engineer</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>Terminal Simulation - Thinesh's Portfolio</title>
     <style>
-        /* Custom Color Palette (Brightened) */
-        :root {
-            --primary-color: #031c45;
-            --secondary-color: #154f8d;
-            --accent-color: #6c96c9;
-            --background-color: #f0f7ff;
-            --text-color: #212121;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--background-color);
             margin: 0;
             padding: 0;
-            color: var(--text-color);
+            background-color: #031c45; /* Terminal background color */
+            color: #87b4d6; /* Terminal text color */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            overflow: hidden;
         }
-
-        header {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 2em 0;
+        #terminal {
+            padding: 20px;
+            white-space: pre-wrap;
+            line-height: 1.5;
         }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: 600;
+        .command-line {
+            color: #6c96c9; /* Command-line color */
         }
-
-        .content {
-            max-width: 900px;
-            margin: 3em auto;
-            padding: 2em;
-            background-color: #e8f3ff;
-            border-radius: 8px;
-            text-align: center;
+        .typing-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: #87b4d6; /* Cursor color */
+            margin-left: 2px;
+            animation: blink 0.6s step-end infinite;
         }
-
-        /* Terminal Styles */
-        .terminal {
-            background: black;
-            color: #00ff00;
-            font-family: monospace;
-            padding: 1em;
-            border-radius: 8px;
-            max-width: 900px;
-            margin: 0 auto 3em;
-            height: 300px;
-            overflow-y: auto;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .typed-cursor {
-            font-size: 1.2em;
-            color: #00ff00;
-        }
-
-        footer {
-            text-align: center;
-            margin: 2em 0;
+        @keyframes blink {
+            50% {
+                background-color: transparent;
+            }
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Thinesh - Senior Infrastructure & DevOps Engineer</p>
-    </header>
-
-    <div class="content">
-        <p>My official portfolio website is under development, extending features.</p>
-    </div>
-
-    <div class="terminal">
-        <pre id="typed"></pre>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Thinesh. All rights reserved.</p>
-    </footer>
+    <div id="terminal"></div>
 
     <script>
-        const scriptContent = `
-***** Introduction *****
-I am passionate about contributing to organizations that value innovation and human creativity.
+        const terminal = document.getElementById('terminal');
 
-***** Professional Journey *****
-I have transitioned from a Software Engineer to DevOps, and currently to a Site Reliability Engineer (SRE), building upon a strong foundation in coding.
+        const messages = [
+            "***** Welcome to Thinesh's Portfolio *****",
+            "",
+            ">>> Loading profile...",
+            "",
+            "***** Introduction *****",
+            "I am passionate about contributing to organizations that value innovation and human creativity.",
+            ">>> Contact: +60127833552",
+            ">>> WhatsApp: https://wa.me/0127833552",
+            ">>> Google Meet: https://calendly.com/thineshsubramani/30min",
+            "",
+            "***** Professional Journey *****",
+            "I have transitioned from a Software Engineer to DevOps, and currently to a Site Reliability Engineer (SRE), building upon a strong foundation in coding.",
+            "",
+            "***** Future Plans *****",
+            "I have dedicated several years to selecting the appropriate research path, not merely for academic advancement.",
+            "My goal is to explore new system design methodologies for large-scale microservices.",
+            "I aim to pursue a Master's degree in distributed computing, focusing on large-scale system designs and microservices.",
+            "",
+            "***** Personal Interests in SRE *****",
+            "I enjoy simulating my own homelab and managing SRE setups, including configuring Proxmox virtual machines.",
+            "",
+            "***** Areas of Lesser Interest *****",
+            "While I am expanding my knowledge in monitoring tools like Grafana and have experience with ELK, I have less interest in security-related tasks and frameworks.",
+            "",
+            "***** Personality and Working Style *****",
+            "- As an INFJ, 'The Advocate,' I prioritize delivering results efficiently, adhering to the 80/20 principle.",
+            "- I prefer to automate repetitive tasks to enhance productivity, exemplified by creating a Python CLI tool for sending emails.",
+            "- I value trust in my ideas and proactively address organizational challenges by developing proofs of concept.",
+            "",
+            ">>> My official portfolio website is under development, extending features...",
+            ">>> End of Profile. Have a great day!"
+            
+        ];
 
-***** Future Plans *****
-I have dedicated several years to selecting the appropriate research path, not merely for academic advancement.
-My goal is to explore new system design methodologies for large-scale microservices.
-I aim to pursue a Master's degree in distributed computing, focusing on large-scale system designs and microservices.
+        let currentMessage = 0;
+        let currentChar = 0;
 
-***** Personal Interests in SRE *****
-I enjoy simulating my own homelab and managing SRE setups, including configuring Proxmox virtual machines.
+        function typeMessage() {
+            if (currentMessage < messages.length) {
+                if (currentChar < messages[currentMessage].length) {
+                    terminal.innerHTML +=
+                        '<span class="command-line">' +
+                        messages[currentMessage][currentChar] +
+                        '</span>';
+                    currentChar++;
+                } else {
+                    terminal.innerHTML += '\n';
+                    currentChar = 0;
+                    currentMessage++;
+                }
+            }
+        }
 
-***** Areas of Lesser Interest *****
-While I am expanding my knowledge in monitoring tools like Grafana and have experience with ELK, I have less interest in security-related tasks.
+        function runTyping() {
+            typeMessage();
+            if (currentMessage < messages.length) {
+                setTimeout(runTyping, 40); // Fast typing speed
+            } else {
+                terminal.innerHTML += '<span class="typing-cursor"></span>';
+            }
+        }
 
-***** Personality and Working Style *****
-- As an INFJ, 'The Advocate,' I prioritize delivering results efficiently, adhering to the 80/20 principle.
-- I prefer to automate repetitive tasks to enhance productivity, exemplified by creating a Python CLI tool for sending emails.
-- I value trust in my ideas and proactively address organizational challenges by developing proofs of concept.
-        `;
-
-        new Typed("#typed", {
-            strings: [scriptContent],
-            typeSpeed: 30,
-            backSpeed: 20,
-            showCursor: true,
-            cursorChar: '|',
-            loop: false,
-        });
+        runTyping();
     </script>
 </body>
 </html>
