@@ -98,32 +98,36 @@
             background-color: #4e92cc;
         }
 
-        /* Terminal Styles */
-        .terminal {
-            max-width: 900px;
-            margin: 3em auto;
-            background-color: var(--terminal-bg);
-            color: var(--terminal-text);
-            padding: 1em 1.5em;
-            border-radius: 8px;
-            font-family: monospace;
-            font-size: 1em;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
+    /* Terminal Styles */
+    .terminal {
+        max-width: 900px;
+        margin: 3em auto;
+        background-color: var(--terminal-bg);
+        color: var(--terminal-text);
+        padding: 1em 1.5em;
+        border-radius: 8px;
+        font-family: monospace;
+        font-size: 1em;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        height: 300px; /* Fixed height */
+        overflow-y: auto; /* Scrollable content */
+    }
 
-        .terminal-line {
-            display: flex;
-            align-items: center;
-            margin: 0.2em 0;
-        }
+    .terminal-line {
+        display: flex;
+        align-items: center;
+        margin: 0.2em 0;
+    }
 
-        .terminal-line span {
-            margin-right: 0.5em;
-        }
+    .terminal-line span {
+        margin-right: 0.5em;
+    }
 
-        .terminal-line .prompt {
-            color: var(--terminal-green);
-        }
+    .terminal-line .prompt {
+        color: var(--terminal-green);
+    }
+
+
     </style>
 </head>
 <body>
