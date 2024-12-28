@@ -256,14 +256,15 @@ function syntaxHighlight(json) {
         "I aim to pursue a Master's degree in distributed computing, focusing on large-scale system designs and microservices.",
         "",
         "***** Personal Interests in SRE *****",
-        "I enjoy simulating my own homelab and managing SRE setups, including configuring Proxmox virtual machines.",
+        "I enjoy simulating my own homelab and managing SRE setups, including configuring Proxmox virtual machines. In my homelab, I am developing a portfolio website using a ReactJS frontend and Flask-based microservices, integrated with a PostgreSQL database and a message broker. I utilize a Raspberry Pi 4 running Ubuntu server for load balancing and reverse proxy projects, showcasing my Linux administration skills. Additionally, I host a domain (devopsinsightlab.cloud) on a VPS with a static public IP, where I am setting up an API Gateway for Flask APIs. My networking experiments include creating tunnels to bypass CGNAT and configuring Dockerized Nginx for hosting services. To advance my SRE expertise, I study tools like Prometheus and Grafana while automating VM setups with pre-configured Kubernetes environments. This hands-on approach deepens my understanding of system administration, networking, and modern DevOps practices.",
         "",
         "***** Areas of Lesser Interest *****",
-        "While I am expanding my knowledge in monitoring tools like Grafana and have experience with ELK, I have less interest in security-related tasks and frameworks.",
+        "I have less interest in frontend, UI and designing stuff.",
         "",
         "***** Personality and Working Style *****",
-        "- As an INFJ, 'The Advocate,' I prioritize delivering results efficiently, adhering to the 80/20 principle.",
-        "- I prefer to automate repetitive tasks to enhance productivity, exemplified by creating a Python CLI tool for sending emails.",
+        "- INFJ, 'The Advocate.', 
+        "- I prioritize delivering results efficiently, adhering to the 80/20 principle.",
+        "- I prefer to automate repetitive tasks to enhance productivity.",
         "- I value trust in my ideas and proactively address organizational challenges by developing proofs of concept."
     ];
 
@@ -286,7 +287,7 @@ function syntaxHighlight(json) {
             terminalLine.appendChild(text);
             terminalElement.appendChild(terminalLine);
             lineIndex++;
-            setTimeout(writeLine, 300);
+            setTimeout(writeLine, 500);
         }
     }
 
