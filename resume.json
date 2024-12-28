@@ -1,15 +1,17 @@
 {
+    "Title": "Resume - JSON",
     "Metadata": {
       "Name": "Thinesh Subramani",
+      "Job": "Site Reliability/DevOps Engineer",
       "contact": "+60 12-7833552",
       "email": "thineshsubramani@gmail.com",
       "linkedin": "linkedin.com/in/thineshsubramani",
       "websites": "thineshsubramani.github.io/thineshsubramani"
     },
     "Resume Summary": {
-      "About me": "A Senior Software Infrastructure and DevOps Engineer with 7 years of IT experience, including nearly 4 years of experience in key organizational roles. Expertise in software development, CI/CD pipelines, composite actions, and managing On-Premises infrastructures (Cloud VRA, Windows/Linux servers, GitHub Enterprise). Skilled in servers, virtualization, containerization, and their networking, along with GitHub Actions, Jenkins, Docker, Kubernetes, Ansible, and scripting in Python, Golang, Bash, and PowerShell. Almost 4 years of experience working with a USA-based team and time zone, and I am comfortable working remotely while aligning with the US time zone.",
+      "About me": "A Senior Software Infrastructure and DevOps Engineer with 7 years of IT experience, including nearly 4 years of experience in key organizational roles. Expertise in software development, CI/CD pipelines, composite actions, and managing On-Premises infrastructures (Cloud VRA, Windows/Linux servers, GitHub Enterprise). Skilled in servers, virtualization, containerization, and their networking, along with GitHub Actions, Jenkins, Docker, Kubernetes, Ansible, and scripting in Python, Golang, Bash, and PowerShell.",
       "Skills": ["Python", "Golang", "Bash", "PowerShell", "GitHub Actions", "Jenkins", "Docker", "Kubernetes", "AWS"],
-      "Goals": "Continue to innovate and optimize CI/CD workflows and infrastructure automation in a senior leadership role while mentoring and driving improvements in DevOps practices."
+      "Additional": "Almost 4 years of experience working with a USA-based team and time zone, and I am comfortable working remotely while aligning with the US time zone."
     },
     "Experience": {
       "Senior Software Infrastructure & DevOps Engineer": [
@@ -24,7 +26,13 @@
             "Implemented a GitHub Workflow for server cleanup and disk usage scanning on 50+ GitHub runner servers.",
             "Researched and proposed architectural enhancements for GitHub runner servers, implementing ELK for robust monitoring.",
             "Developed a Python script to monitor GitHub runner servers, outputting Elasticsearch-compatible logs.",
-            "Streamlined a 4-hour manual task by creating a GitHub Action for automated Active Directory user creation and server access assignment."
+            "Streamlined a 4-hour manual task by creating a GitHub Action for automated Active Directory user creation and server access assignment.",
+            "Utilized Ansible and GitHub Actions to trigger Bash scripts on Cloud VRA Linux servers, automating Kubernetes installation with additional proxy settings, reducing manual setup time by 2 hours per server.",
+            "Developed a GitHub composite action with Dockized Trivy for standardized pipeline security scanning, callable by workflows across different repositories, ensuring consistent vulnerability assessment and security practices.",
+            "Piloted Ansible for automating Docker image caching and cleanup, eliminating 8 minutes of image pulling time and cleaning up unused images on servers.",
+            "Served as Scrum Master, managing agile practices, DSU meetings, and weekly syncs with internal USA stakeholders, addressing frequent requirement changes and conflicts, enhancing project innovation.",
+            "Leveraged Jira for stakeholder communication and tracking evolving requirements through issue tracking and story points, achieving significant process improvement, and reducing project completion time by 40%.",
+            "Trained and mentored 14 upcoming Tech Leads in Malaysia through the Tech Lead Program, enhancing their leadership and technical skills."
           ]
         }
       ],
@@ -52,7 +60,9 @@
             "Developed Jenkins pipeline automation for GitHub repository scans using containerized Gitleaks.",
             "Guided 20+ Intel teams worldwide in CI/CD setup, debugging, and tool selection between Jenkins and GitHub Actions.",
             "Led migration from GitLab CI to GitHub Actions, improving CI/CD performance.",
-            "Designed and implemented a new CI/CD architecture by converting 150 traditional Jenkins jobs to Multibranch Pipelines."
+            "Designed and implemented a new CI/CD architecture by converting 150 traditional Jenkins jobs to Multibranch Pipelines.",
+            "Developed a containerized Django-based web dashboard for displaying big data loading metrics on Cloud Foundry.",
+            "Assisted a peer engineer in normalizing a database of over 600,000 lines, utilizing partitioning and indexing to reduce query time from 18 minutes to 1 minute."
           ]
         }
       ],
@@ -63,7 +73,7 @@
           "year_start": "Apr 2021",
           "year_end": "Jan 2023",
           "deliverables": [
-            "Developed new Python-based automation script from legacy code which transfers big data files to Hadoop servers.",
+            "Developed new Python based automation script from legacy code which transfers bigdata files to Hadoop servers reduced execution time from 4 hours to 2 minutes by implementing multiprocessing and multi-threading",
             "Installed file beats on multiple servers to load logs files to Elastic Search."
           ]
         }
@@ -91,8 +101,8 @@
     },
     "Projects": {
       "GitHub Advanced Workflow Dispatch Form": "Created a containerized Django tool to handle large text and CSV file inputs, converting them into JSON payloads to trigger remote GitHub workflows.",
-      "Home Lab Servers": "Designed to explore and implement modern DevOps and Site Reliability Engineering practices. It utilizes tools like Prometheus, Grafana, Kubernetes, Argo CD, Ansible, and Consul service discovery.",
-      "Scalable Portfolio Website with React and Flask on Kubernetes": "Developed a portfolio website with a microservices architecture, ReactJS frontend, Flask backend, Nginx for reverse proxy, Istio and Argo CD for continuous delivery, and Kafka for communication."
+      "Home Lab Servers": "Designed to explore and implement modern DevOps and Site Reliability Engineering practices. Focused on cloud-native technologies, automation, and microservices architectures. It utilizes tools like Prometheus, Grafana, Kong API Gateway forward/reverse proxy, VPN, Ubuntu servers, VMs, LXC, Docker, Kubernetes, Argo CD, Ansible, and Consul service discovery The lab also includes firewall explorations and Squid proxy for advanced networking configurations. It serves as a testig ground for building scalable, fault-tolerant systems, integrating cloud solutions, and optimizing performance.",
+      "Scalable Portfolio Website with React and Flask on Kubernetes": "Developed personal portfolio website to showcase my research and findings on DevOps and programming. The website is built using a microservices architecture and includes features such as booking interviews and notifying users. The frontend is developed with ReactJS, while the backend is built using Flask to handle APIs, database interactions, and backend processing. Load balancing and reverse proxy functionalities are managed with Nginx, and the entire application runs on Kubernetes with a service mesh implemented using Istio and Argo CD for continuous delivery. The architecture follows an event-driven design where multiple Flask services have distinct roles and dedicated databases, enabling horizontal scaling. To simplify asynchronous communication, Kafka is used to avoid complex API calling patterns. Additionally, Kong API Gateway is implemented to centralize and manage all API calls effectively."
     },
     "Skills": {
       "Soft-skills": ["Leadership", "Mentorship", "Collaboration", "Time Management", "Communication"],
