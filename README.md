@@ -1,5 +1,5 @@
 
-Expertise in Devops 
+
 ##### Migrating all my shareable entreprise github projects/sc to my personal.
 <!--
 **thineshsubramani/thineshsubramani** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
