@@ -1,5 +1,5 @@
 <h1 align="center">Hey !, I'm Thinesh</h1>
-<h3 align="center">Welcome to my profile</h3>
+<h3 align="center">Welcome to my profile, I'm trying hard to push all the fancy tools I've developed and using locally for my productivity ;) !</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=thineshsubramani&label=Profile%20views&color=0e75b6&style=flat" alt="thineshsubramani" /> </p>
 
