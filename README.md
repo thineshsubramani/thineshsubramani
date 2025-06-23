@@ -1,6 +1,7 @@
 # Hey, I'm Thinesh!
 
-Welcome to my GitHub profile! I'm passionate about building and sharing productivity tools that I develop and use locally to streamline my workflow. Explore my projects and connect with me! 
+Welcome to my GitHub profile! I'm passionate about building and sharing productivity tools that I develop and use locally to streamline my workflow. Explore my projects and connect with me!
+
 [![Profile Views](https://komarev.com/ghpvc/?username=thineshsubramani&label=Profile%20views&color=0e75b6&style=flat)](https://github.com/thineshsubramani)
 
 *Migrating my coolest projects from internal repos to share with the world!*
