@@ -18,4 +18,4 @@ Welcome to my GitHub profile! I'm passionate about building and sharing producti
 ## Connect with Me
 - [LinkedIn](https://linkedin.com/in/thineshsubramani)
 
-Thanks for visiting! Feel free to explore my repositories and reach out for collabs or ideas! 😄
+Feel free to explore my repositories and reach out for collabs or ideas! 😄
