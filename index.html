@@ -1,297 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Thinesh - Senior Infrastructure & DevOps Engineer</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        /* Custom Color Palette */
-        :root {
-            --primary-color: #031c45;
-            --secondary-color: #154f8d;
-            --accent-color: #6c96c9;
-            --light-color: #87b4d6;
-            --text-color: #212121;
-            --button-hover-color: #000000;
-            --button-active-color: #00efdb;
-            --container-bg: #e8f3ff;
-            --terminal-bg: rgba(3, 34, 38, 0.8); /* Updated terminal background with transparency */
-            --terminal-text: #a9fff8;
-            --terminal-green: #a9fff8;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thinesh – SRE / DevOps</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-bg: #f5f5f5;
+    --accent-color: #6c63ff;  /* deep purple */
+    --footer-color: #888888;
+  }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-        }
+  [data-theme="dark"] {
+    --bg-color: #12172a;
+    --text-color: #e0e6f0;
+    --card-bg: #1e2540;
+    --accent-color: #6c63ff;
+    --footer-color: #555555;
+  }
 
-        header {
-            background-color: #4a7fa6;
-            color: #ffff;
-            text-align: center;
-            padding: 3em 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+  body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    transition: background 0.3s, color 0.3s;
+  }
 
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: 600;
-        }
+  header {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+  }
 
-        p {
-            margin: 0;
-            font-size: 1.0em;
-            line-height: 1.6;
-        }
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
 
-        .content {
-            max-width: 901px;
-            margin: 3em auto;
-            padding: 2em;
-            background-color: var(--container-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+  header p {
+    margin: 0.5em 0 0;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
 
-        .whatsapp-button, .meet-button {
-            display: inline-block;
-            padding: 0.8em 2em;
-            margin-top: 2em;
-            background-color: #0d1c26;
-            color: white;
-            font-size: 1.2em;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+  .toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
 
-        .whatsapp-button:hover, .meet-button:hover {
-            background-color: var(--button-hover-color);
-            transform: translateY(-4px);
-        }
+  .toggle-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-color);
+    transition: color 0.3s;
+  }
 
-        .whatsapp-button:active, .meet-button:active {
-            background-color: var(--button-active-color);
-        }
+  .toggle-btn:hover svg {
+    color: #4b42d8; /* darker purple on hover */
+  }
 
-        .whatsapp-button {
-            background-color: #4a7fa6
-        }
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1em 0;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+  }
 
-    /* Terminal Styles */
-    .terminal {
-        max-width: 900px;
-        margin: 3em auto;
-        background-color: var(--terminal-bg);
-        color: var(--terminal-text);
-        padding: 1em 1.5em;
-        border-radius: 8px;
-        font-family: monospace;
-        font-size: 1em;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        height: 300px; /* Fixed height */
-        overflow-y: auto; /* Scrollable content */
-    }
+  .card h2 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 1.4em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.3em;
+    font-weight: 600;
+  }
 
-    .terminal-line {
-        display: flex;
-        align-items: center;
-        margin: 0.2em 0;
-    }
+  ul {
+    padding-left: 1.2em;
+    margin: 0;
+  }
 
-    .terminal-line span {
-        margin-right: 0.5em;
-    }
+  ul li {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+  }
 
-    .terminal-line .prompt {
-        color: var(--terminal-green);
-    }
-
-    /* JSON Styling */
-    .json-container {
-        max-width: 900px;
-        margin: 3em auto;
-        padding: 2em;
-        background-color: #1e1e1e;
-        color: #dcdcdc;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        font-family: monospace;
-        overflow-x: auto;
-    }
-
-    .json-container .key {
-        color: #a5d6a7;
-    }
-
-    .json-container .string {
-        color: #00fff2;
-    }
-
-    .json-container .number {
-        color: #c3e88d;
-    }
-
-    .json-container .boolean {
-        color: #ffcb6b;
-    }
-
-    .json-container .null {
-        color: #9e9e9e;
-    }
-    
-    </style>
+  .footer {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: var(--footer-color);
+  }
+</style>
 </head>
 <body>
 
 <header>
-    <h1>Thinesh Subramani</h1>
-    <p>Senior Infrastructure & DevOps Engineer</p>
+  <button class="toggle-btn" onclick="toggleTheme()" id="themeIcon">
+    <i data-lucide="moon"></i>
+  </button>
+  <h1>Thinesh Subramani</h1>
+  <p>Senior Infrastructure & DevOps / SRE @ Intel</p>
 </header>
 
-<div class="content">
-    <p>Hey There ! Feel free to reach out for interview, potential collaborations or discussions on DevOps practices.</p>
-    <div></div>
-    <p>Recommended to <strong>message me on WhatsApp</strong> before making a call.</p>
-    <p class="contact-info">
-        Contact Number: +6012-7833552
-    </p>
-
-    <a href="https://wa.me/60127833552" class="whatsapp-button" target="_blank">
-        <i class="material-icons">chat</i> Text Me 
-    </a>
-
+<div class="card">
+  <h2>Special Note</h2>
+  <p>I'm open to remote Site Reliability Engineer roles based in Malaysia, Singapore, or the USA. This page just shares a few extra details to help you decide if it aligns with what you're looking for.</p>
 </div>
 
-<div class="terminal" id="terminal"></div>
+<div class="card">
+  <h2>Rules (Please Read)</h2>
+  <ul>
+  <li><strong>Calls:</strong> I auto‑silence unknown numbers due to scam calls → please text, SMS, WhatsApp, or email me before calling.</li>
+  <li><strong>Hiring:</strong> I prefer direct company roles – not working through agents or third parties.</li>
+  <li><strong>Certifications:</strong> I’m not preferring certification training offers at this time.</li>
+  <li><strong>Business:</strong> I’m currently focused on hands‑on tech projects rather than business proposals.</li>
+  </ul>
+</div>
 
-<!-- JSON Container -->
-<div class="json-container" id="json-container"></div>
+<div class="card">
+  <h2>Status & Objectives</h2>
+  <ul>
+    <li><strong>Status:</strong> Actively exploring opportunities</li>
+    <li><strong>Goal:</strong> Planning to transition into a new SRE role at select organizations as part of my career growth</li>
+  </ul>
+</div>
+
+<div class="footer">
+  &copy; 2025 Thinesh
+</div>
 
 <script>
-    // Function to format and display JSON
-// Function to format and display JSON
-function formatJSON(jsonObject) {
-    const jsonContainer = document.getElementById("json-container");
-    const formattedJSON = JSON.stringify(jsonObject, null, 4); // Format JSON with indentation
-    const highlightedJSON = syntaxHighlight(formattedJSON); // Apply syntax highlighting
-    console.log(highlightedJSON); // For debugging, see the highlighted JSON
-    jsonContainer.innerHTML = highlightedJSON; // Set formatted and highlighted JSON as innerHTML
-}
-
-// Function to add colors and styles to the JSON content
-// Function to add colors and styles to the JSON content
-// Function to add colors and styles to the JSON content with structured HTML
-function syntaxHighlight(json) {
-    // Parse the JSON and recursively format it
-    const jsonObject = JSON.parse(json);
-
-    function formatJson(obj) {
-        if (typeof obj === 'object' && !Array.isArray(obj)) {
-            let html = '<div class="json-object">';
-            for (const key in obj) {
-                if (obj.hasOwnProperty(key)) {
-                    html += `<ul class="json-key-value"><li class="key">"${key}":</li><li class="value">${formatJson(obj[key])}</li></ul>`;
-                }
-            }
-            html += '</div>';
-            return html;
-        } else if (Array.isArray(obj)) {
-            let html = '<ul class="json-array">';
-            for (const item of obj) {
-                html += `<li class="array-item">${formatJson(item)}</li>`;
-            }
-            html += '</ul>';
-            return html;
-        } else {
-            return `<span class="value">${highlightPrimitiveValue(obj)}</span>`;
-        }
+  function toggleTheme() {
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('themeIcon').firstElementChild;
+    const current = html.getAttribute('data-theme');
+    if (current === 'dark') {
+      html.setAttribute('data-theme', 'light');
+      themeIcon.setAttribute('data-lucide', 'moon');
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      themeIcon.setAttribute('data-lucide', 'sun');
     }
-
-    function highlightPrimitiveValue(value) {
-        if (typeof value === 'string') {
-            return `<span class="string">"${value}"</span>`;
-        } else if (typeof value === 'boolean') {
-            return `<span class="boolean">${value}</span>`;
-        } else if (value === null) {
-            return `<span class="null">${value}</span>`;
-        } else if (typeof value === 'number') {
-            return `<span class="number">${value}</span>`;
-        }
-        return value;
-    }
-
-    return formatJson(jsonObject);
-}
-
-
-    // Fetch JSON from the file in the same directory
-    fetch('resume.json')
-        .then(response => response.json())
-        .then(data => {
-            formatJSON(data);
-        })
-        .catch(error => console.error('Error loading JSON:', error));
-
-    // Sample terminal content
-    const terminalElement = document.getElementById("terminal");
-    const terminalLines = [
-    "***** Introduction *****",
-        "Hi.......",
-        "",
-        "***** Professional Journey *****",
-        "I have transitioned from a Software Engineer to DevOps, and currently to a Site Reliability Engineer (SRE), building upon a strong foundation in coding and automation.",
-        "",
-        "***** Future Plans *****",
-        "I have dedicated several years to selecting the appropriate research path, not merely for academic advancement.",
-        "My goal is to explore new system design methodologies for large-scale microservices.",
-        "I aim to pursue a Master's degree in distributed computing, focusing on large-scale system designs and microservices.",
-        "",
-        "***** Personal Interests in SRE *****",
-        "I enjoy simulating my own homelab and managing SRE setups, including configuring Proxmox virtual machines. In my homelab, I am developing a portfolio website using a ReactJS frontend and Flask-based microservices, integrated with a PostgreSQL database and a message broker. I utilize a Raspberry Pi 4 running Ubuntu server for load balancing and reverse proxy projects, showcasing my Linux administration skills. Additionally, I host a domain (devopsinsightlab.cloud) on a VPS with a static public IP, where I am setting up an API Gateway for Flask APIs. My networking experiments include creating tunnels to bypass CGNAT and configuring Dockerized Nginx for hosting services. To advance my SRE expertise, I study tools like Prometheus and Grafana while automating VM setups with pre-configured Kubernetes environments. This hands-on approach deepens my understanding of system administration, networking, and modern DevOps practices.",
-        "",
-        "***** Areas of Lesser Interest *****",
-        "I have less interest in frontend, UI and designing stuff.",
-        "",
-        "***** Personality and Working Style *****",
-        "- INFJ, 'The Advocate.'", 
-        "- I prioritize delivering results efficiently, adhering to the 80/20 principle.",
-        "- I prefer to automate repetitive tasks to enhance productivity.",
-        "- I value trust in my ideas and proactively address organizational challenges by developing proofs of concept."
-    ];
-
-    let lineIndex = 0;
-
-    function writeLine() {
-        if (lineIndex < terminalLines.length) {
-            const line = terminalLines[lineIndex];
-            const terminalLine = document.createElement("div");
-            terminalLine.classList.add("terminal-line");
-
-            const prompt = document.createElement("span");
-            prompt.classList.add("prompt");
-            prompt.textContent = "$";
-            
-            const text = document.createElement("span");
-            text.textContent = line;
-
-            terminalLine.appendChild(prompt);
-            terminalLine.appendChild(text);
-            terminalElement.appendChild(terminalLine);
-            lineIndex++;
-            setTimeout(writeLine, 500);
-        }
-    }
-
-    writeLine();
+    lucide.createIcons(); // re-render icon
+  }
+  // Init: set dark mode by default
+  document.documentElement.setAttribute('data-theme', 'light');
+  lucide.createIcons();
 </script>
 
 </body>
