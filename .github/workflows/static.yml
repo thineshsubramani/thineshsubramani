@@ -27,7 +27,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: Windows #ubuntu-latest
+    runs-on: self-hosted #ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
