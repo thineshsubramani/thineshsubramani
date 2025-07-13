@@ -1,4 +1,4 @@
-# Hey, I'm Thinesh!
+# Hey !!
 
 Welcome to my GitHub profile! I'm passionate about building and sharing productivity tools that I develop and use locally to streamline my workflow. Explore my projects and connect with me!
 
