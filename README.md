@@ -19,3 +19,5 @@ Welcome to my GitHub profile! I'm passionate about building and sharing producti
 - [LinkedIn](https://linkedin.com/in/thineshsubramani)
 
 Feel free to explore my repositories and reach out for collabs or ideas! 😄
+
+Get my latest repositories updates here [Audit Reports](https://github.com/thineshsubramani/audit-reports/blob/main/README.md)
