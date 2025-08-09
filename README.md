@@ -1,13 +1,13 @@
 # Soldiers
 
-Welcome to my GitHub profile! I'm passionate about building and sharing productivity tools that I develop and use locally to streamline my workflow. Explore my projects and connect with me!
+Welcome to my GitHub profile! I'm actively developing many tools that streamline day to day SRE/Devops Tasks. Feel free explore my projects.
 
 [![Profile Views](https://komarev.com/ghpvc/?username=thineshsubramani&label=Profile%20views&color=0e75b6&style=flat)](https://github.com/thineshsubramani)
 
-*Migrating my coolest projects from internal repos to share with the world!*
+*Migrating my coolest projects from internal repos to make it publicly available*
 
 ## About Me
-- 💻 Site Reliability Engineer with a knack for automation and DevOps
+- 💻 Site Reliability Engineer (Wannabe)
 - 🛠️ Crafting tools to boost productivity and simplify workflows
 - 🌍 Based in Malaysia 
 - 📫 Reach me via [LinkedIn](https://linkedin.com/in/thineshsubramani)
