@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thinesh – SLA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-bg: #f5f5f5;
+    --accent-color: #6c63ff;
+    --footer-color: #888888;
+  }
+
+  [data-theme="dark"] {
+    --bg-color: #12172a;
+    --text-color: #e0e6f0;
+    --card-bg: #1e2540;
+    --accent-color: #6c63ff;
+    --footer-color: #555555;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  header {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  header p {
+    margin: 0.5em 0 0;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .toggle-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-color);
+    transition: color 0.3s;
+  }
+
+  .toggle-btn:hover svg {
+    color: #4b42d8;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1em 0;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+  }
+
+  .card h2 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 1.4em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.3em;
+    font-weight: 600;
+  }
+
+  ul {
+    padding-left: 1.2em;
+    margin: 0;
+  }
+
+  ul li {
+    margin-bottom: 1em;
+    line-height: 1.6;
+  }
+
+  .footer {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: var(--footer-color);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <button class="toggle-btn" onclick="toggleTheme()" id="themeIcon">
+    <i data-lucide="moon"></i>
+  </button>
+  <h1>My SLA to the Workplace</h1>
+  <p>Here’s what you can expect from me as an SRE / DevOps engineer.</p>
+</header>
+
+<div class="card">
+  <ul>
+    <li><strong>Fast Ramp-Up:</strong> Even if I don’t know a tool, I’ll figure it out quickly. Strong OS & networking understanding helps me learn and apply tools fast.</li>
+    <li><strong>Surprising with Working Solution:</strong> Any idea I propose comes with a working prototype built during free time—learning for me, output for the team.</li>
+    <li><strong>No Task Waiting:</strong> I don’t wait for Jira tickets or alerts. I proactively create tasks, understand business needs, and pitch solutions.</li>
+    <li><strong>Automation OF COURSE:</strong> I build modular, scalable, production-grade automations, not hacky scripts.</li>
+    <li><strong>Performance Obsessed:</strong> I optimize code, infra, and servers, squeezing maximum efficiency out of everything.</li>
+    <li><strong>Continuous Learning:</strong> Running my homelab daily, constantly testing, breaking, and building systems.</li>
+    <li><strong>Deep Dive Mindset:</strong> I explore tech from kernel/syscall level to cloud-native orchestration.</li>
+    <li><strong>Self-Healing Systems:</strong> Design systems that detect, recover, and scale automatically—no 3 AM panic required.</li>
+    <li><strong>Scalable & Modular Code:</strong> Code is clean, organized, and extensible.</li>
+    <li><strong>Networking:</strong> I enjoy connecting people with different skills and learning from experienced engineers.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  &copy; 2025 Thinesh
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('themeIcon').firstElementChild;
+    const current = html.getAttribute('data-theme');
+    if (current === 'dark') {
+      html.setAttribute('data-theme', 'light');
+      themeIcon.setAttribute('data-lucide', 'moon');
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      themeIcon.setAttribute('data-lucide', 'sun');
+    }
+    lucide.createIcons();
+  }
+  document.documentElement.setAttribute('data-theme', 'dark');
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
