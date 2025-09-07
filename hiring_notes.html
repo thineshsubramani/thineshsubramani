@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thinesh – HR Notes</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --card-bg: #f5f5f5;
+    --accent-color: #6c63ff;
+    --footer-color: #888888;
+  }
+
+  [data-theme="dark"] {
+    --bg-color: #12172a;
+    --text-color: #e0e6f0;
+    --card-bg: #1e2540;
+    --accent-color: #6c63ff;
+    --footer-color: #555555;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  header {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  header p {
+    margin: 0.5em 0 0;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .toggle-btn svg {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-color);
+    transition: color 0.3s;
+  }
+
+  .toggle-btn:hover svg {
+    color: #4b42d8;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1em 0;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+  }
+
+  .card h2 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 1.4em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 0.3em;
+    font-weight: 600;
+  }
+
+  ul {
+    padding-left: 1.2em;
+    margin: 0;
+  }
+
+  ul li {
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+  }
+
+  .footer {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: var(--footer-color);
+  }
+
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <button class="toggle-btn" onclick="toggleTheme()" id="themeIcon">
+    <i data-lucide="moon"></i>
+  </button>
+  <h1>Thinesh Subramani – HR Notes</h1>
+  <p>Quick guide for HR / Hiring Managers</p>
+</header>
+
+<div class="card">
+  <h2>Contact Me</h2>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:thinesh@example.com">thinesh@example.com</a></li>
+    <li><strong>WhatsApp:</strong> <a href="https://wa.me/60123456789" target="_blank">+60 12 345 6789</a></li>
+    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thinesh" target="_blank">linkedin.com/in/thinesh</a></li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Scheduling an Interview</h2>
+  <ul>
+    <li>Please send me a calendar invite via email with preferred date & time.</li>
+    <li>I operate in Malaysia Time (GMT+8).</li>
+    <li>Preferred platform: Zoom / Google Meet / Teams.</li>
+    <li>Typical interview duration: 45–60 minutes.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Preferences</h2>
+  <ul>
+    <li><strong>Work Location:</strong> Remote only (Malaysia, Singapore, USA).</li>
+    <li><strong>Call Policy:</strong> Please text/email before calling.</li>
+    <li><strong>Focus:</strong> Hands-on SRE / DevOps work, not certification courses or business proposals.</li>
+    <li><strong>Notice Period:</strong> 3–4 weeks (can join promptly after offer).</li>
+  </ul>
+</div>
+
+<div class="footer">
+  &copy; 2025 Thinesh
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('themeIcon').firstElementChild;
+    const current = html.getAttribute('data-theme');
+    if (current === 'dark') {
+      html.setAttribute('data-theme', 'light');
+      themeIcon.setAttribute('data-lucide', 'moon');
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      themeIcon.setAttribute('data-lucide', 'sun');
+    }
+    lucide.createIcons();
+  }
+  // Init dark mode
+  document.documentElement.setAttribute('data-theme', 'dark');
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
