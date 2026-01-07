@@ -2,6 +2,8 @@
 
 Welcome to my GitHub profile! I'm actively developing many tools that streamline day to day SRE/Devops Tasks. Feel free explore my projects.
 
+Status: I won’t be actively engaged in my small public tools (e.g., GitHub exporters) unless there’s strong demand (stars). I’m currently working on a large independent project, with the product planned for release in mid-2026. 😉 However, anyone is welcome to contribute to any of my tools if you’re interested.
+
 [![Profile Views](https://komarev.com/ghpvc/?username=thineshsubramani&label=Profile%20views&color=0e75b6&style=flat)](https://github.com/thineshsubramani)
 
 *Migrating my coolest projects from internal repos to make it publicly available*
