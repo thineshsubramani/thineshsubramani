@@ -9,7 +9,7 @@ Status: I won’t be actively engaged in my small public tools (e.g., GitHub exp
 *Migrating my coolest projects from internal repos to make it publicly available*
 
 ## About Me
-- 💻 Site Reliability Engineer (Wannabe)
+- 💻 System Soldier
 - 🛠️ Crafting tools to boost productivity and simplify workflows
 - 🌍 Based in Malaysia 
 - 📫 Reach me via [LinkedIn](https://linkedin.com/in/thineshsubramani)
