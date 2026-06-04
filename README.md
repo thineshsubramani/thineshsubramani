@@ -1,6 +1,7 @@
 # Soldiers
 
-Welcome to my GitHub profile! I'm developing many tools that streamline day to day SRE/Devops Tasks. Feel free explore my projects.
+Welcome! I build tools to automate daily SRE tasks. Aside from code backup, this profile is a space to find like-minded engineers and homelabbers for collaboration. Let's build open-source side projects together and give back to the DevOps/SRE community!
+**If we FAIL, we LEARN**
 
 > I am a practical, hands-on learner focused on applied engineering rather than just pure theory. This profile serves as my personal R&D lab for testing new code, architectures, and proofs of concept. Some repositories are active community experiments, others are built to rapidly validate new tech stacks, and a few remain private. As these projects mature, I actively refactor, optimize, or consolidate them. Cheers!
 
