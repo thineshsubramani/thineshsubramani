@@ -23,9 +23,3 @@ Status: Deep in R&D mode for a major independent product launching mid-2027. ðŸ˜
 Feel free to explore my repositories and reach out for collabs or ideas! ðŸ˜„
 
 Get my latest repositories updates here [Audit Reports](https://github.com/thineshsubramani/audit-reports/blob/main/README.md)
-
-<br clear="both">
-
-<div>
-  <img style="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer&reversal=false&text=System%20Soldier&fontSize=20&fontColor=FFFFFF&fontAlign=50&fontAlignY=50&stroke=-&descSize=20&descAlign=50&descAlignY=50&color=gradient"  />
-</div>
