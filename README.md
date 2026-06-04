@@ -2,9 +2,11 @@
 
 Welcome to my GitHub profile! I'm developing many tools that streamline day to day SRE/Devops Tasks. Feel free explore my projects.
 
-Status: I won’t be actively engaged in my small public tools (e.g., GitHub exporters). I’m currently working on a large independent project, with the product planned for release in mid-2027. 😉 However, anyone is welcome to contribute to any of my tools if you’re interested.
+> I am a practical, hands-on learner focused on applied engineering rather than just pure theory. This profile serves as my personal R&D lab for testing new code, architectures, and proofs of concept. Some repositories are active community experiments, others are built to rapidly validate new tech stacks, and a few remain private. As these projects mature, I actively refactor, optimize, or consolidate them. Cheers!
 
 [![Profile Views](https://komarev.com/ghpvc/?username=thineshsubramani&label=Profile%20views&color=0e75b6&style=flat)](https://github.com/thineshsubramani)
+
+Status: Deep in R&D mode for a major independent product launching mid-2027. 😉 Smaller public tools are unmaintained but open for community contributions.
 
 *Migrating my coolest projects from internal repos to make it publicly available*
 
@@ -13,9 +15,6 @@ Status: I won’t be actively engaged in my small public tools (e.g., GitHub exp
 - 🛠️ Crafting tools to boost productivity and simplify workflows
 - 🌍 Based in Malaysia 
 - 📫 Reach me via [LinkedIn](https://linkedin.com/in/thineshsubramani)
-
-## GitHub Stats
-![Thinesh's GitHub Stats](https://github-readme-stats.vercel.app/api?username=thineshsubramani&show_icons=true&theme=transparent)
 
 ## Connect with Me
 - [LinkedIn](https://linkedin.com/in/thineshsubramani)
