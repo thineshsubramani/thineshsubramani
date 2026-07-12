@@ -23,3 +23,10 @@ Status: Deep in R&D mode for a major independent product launching mid-2027. ðŸ˜
 Feel free to explore my repositories and reach out for collabs or ideas! ðŸ˜„
 
 Get my latest repositories updates here [Audit Reports](https://github.com/thineshsubramani/audit-reports/blob/main/README.md)
+
+| Project Label | Description | Use Case & Quality |
+| :--- | :--- | :--- |
+| **Personal** | Private tools or solo projects made strictly for personal utility. | No standard docs. Code might be messy and unstructured. |
+| **Lab** | Research, R&D, and active testing grounds for new ideas/PoCs. | Functional but experimental. Looking for community feedback. |
+| **Community** | Finished, reusable projects built specifically for the community. | Standardized docs. Clean code structure and ready to accept contributions. |
+
