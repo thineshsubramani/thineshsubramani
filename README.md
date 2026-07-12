@@ -27,7 +27,7 @@ Get my latest repositories updates here [Audit Reports](https://github.com/thine
 
 | Project Label | Description | Use Case & Quality |
 | :--- | :--- | :--- |
-| **Personal** | Personal usecases — Not for community usage. | Docs will never follow the standards, might be messy. |
+| **Personal** | Personal usecases, Not for community usage. | Docs will never follow the standards, might be messy. |
 | **Lab** | Used for testing/developing new poc. | Might be a good candidate for community deployment. |
 | **Community** | Deploying for Community use. | Follow standard docs, code and structure. |
 
