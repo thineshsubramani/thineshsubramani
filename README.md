@@ -13,8 +13,7 @@
 
 ###  Status Report
 ```yaml
-Current Mode: Deep in R&D
-Target: Major independent product launch (Mid-2027)
+Current Mode: R&D
 Note: Smaller public tools are currently unmaintained but open for community contributions.
 ```
 ---
@@ -23,7 +22,7 @@ Note: Smaller public tools are currently unmaintained but open for community con
 
 | Label | Description | Use Case & Quality |
 | :--- | :--- | :--- |
-| **Personal** | Personal use-cases; not intended for community usage. | Documentation will not follow strict standards; code is experimental. |
+| **Personal** | Personal use-cases; not intended for community usage. | Documentation might not follow strict standards; code is experimental. |
 | **Lab** | Used for testing and developing new Proofs of Concept. | Potential candidates for future community deployment. |
 | **Community**| Deployed specifically for community use. | Adheres to standard documentation, coding conventions, and structure. |
 
