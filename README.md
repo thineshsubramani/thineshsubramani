@@ -1,13 +1,7 @@
 # 𝗦𝗬𝗦𝗧𝗘𝗠 𝗦𝗢𝗟𝗗𝗜𝗘𝗥
 > <kbd>▲ RANK</kbd> **Commander**
 
-
-Welcome! I build tools to automate daily SRE tasks. Aside from code backup, this profile is a space to find like-minded engineers and homelabbers for collaboration. Let's build open-source side projects together and give back to the community!
-
-> **"If we FAIL, we LEARN"**
-
 ---
-
 ###  The R&D Lab
 > This profile serves as my personal R&D lab for testing new code, architectures, and proofs of concept. Some repositories are active community experiments, others are built to rapidly validate new tech stacks, and a few remain private. As these projects mature, I actively refactor, optimize, or consolidate them. 
 > 
